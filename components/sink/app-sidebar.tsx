@@ -2,20 +2,14 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
   BookOpen,
-  Bot,
-  Command,
   Frame,
   GalleryVerticalEnd,
   Map,
   PieChart,
-  Settings2,
-  SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "@/components/sink/nav-main"
-import { NavProjects } from "@/components/sink/nav-projects"
 import { NavUser } from "@/components/sink/nav-user"
 import { TeamSwitcher } from "@/components/sink/team-switcher"
 import {
@@ -29,113 +23,117 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "매일건강",
+    email: "m@naver.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "매일건강",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "매일건강",
     },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
+    // {
+    //   name: "Acme Corp.",
+    //   logo: AudioWaveform,
+    //   plan: "Startup",
+    // },
+    // {
+    //   name: "Evil Corp.",
+    //   logo: Command,
+    //   plan: "Free",
+    // },
   ],
   navMain: [
+    // {
+    //   title: "Playground",
+    //   url: "#",
+    //   icon: SquareTerminal,
+    //   isActive: true,
+    //   items: [
+    //     {
+    //       title: "History",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Starred",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Settings",
+    //       url: "#",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Models",
+    //   url: "#",
+    //   icon: Bot,
+    //   items: [
+    //     {
+    //       title: "Genesis",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Explorer",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Quantum",
+    //       url: "#",
+    //     },
+    //   ],
+    // },
     {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
+      title: "문서",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
-          url: "#",
+          title: "설문지",
+          url: "/",
         },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
+        // {
+        //   title: "Introduction",
+        //   url: "#",
+        // },
+        // {
+        //   title: "Get Started",
+        //   url: "#",
+        // },
+        // {
+        //   title: "Tutorials",
+        //   url: "#",
+        // },
+        // {
+        //   title: "Changelog",
+        //   url: "#",
+        // },
       ],
     },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
+    // {
+    //   title: "Settings",
+    //   url: "#",
+    //   icon: Settings2,
+    //   items: [
+    //     {
+    //       title: "General",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Team",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Billing",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Limits",
+    //       url: "#",
+    //     },
+    //   ],
+    // },
   ],
   projects: [
     {
@@ -164,7 +162,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
