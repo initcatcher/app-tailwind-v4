@@ -41,8 +41,9 @@ export default function Home() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <Toaster />
-          <div className="flex justify-center">
-            <SurveyCard />
+          <div className="flex justify-center gap-4 flex-wrap">
+            <SurveyCard title="리셋 다이어트" description="리셋 다이어트 30문항" href="/s/reset" />
+            <SurveyCard title="gpt 다이어트" description="gpt 다이어트" href="/s/first" />
           </div>
           {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <ComponentWrapper name="Accordion">

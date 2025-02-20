@@ -25,14 +25,22 @@ const notifications = [
     },
 ]
 
-type CardProps = React.ComponentProps<typeof Card>
+
+
+
+type CardProps = React.ComponentProps<typeof Card> & {
+    title: string;
+    description: string
+    href: string
+};
 
 export default function SurveyCard({ className, ...props }: CardProps) {
+    const { title, description, href } = props;
     return (
         <Card className={cn("w-[380px]", className)} {...props}>
             <CardHeader>
-                <CardTitle>초기설문</CardTitle>
-                <CardDescription>초기설문에 대한 간단한 설명</CardDescription>
+                <CardTitle>{title}</CardTitle>
+                <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-4">
                 <div>
@@ -56,7 +64,7 @@ export default function SurveyCard({ className, ...props }: CardProps) {
             </CardContent>
             <CardFooter>
                 <Button className="w-full" asChild>
-                    <Link href={'/survey'}>
+                    <Link href={href}>
                         설문하러가기
                     </Link>
                 </Button>
